@@ -9,11 +9,14 @@ pipeline {
       }
     }
 
+    stage('Installation') {
+      steps {
+        sh 'npm install'
+      }
+    }
+
     stage('Build') {
       steps {
-        // Build your static website assets (if needed)
-        // For example, you can use npm to install dependencies and build assets
-        sh 'npm install'
         sh 'npm run build'
       }
     }
