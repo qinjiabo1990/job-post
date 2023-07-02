@@ -38,7 +38,7 @@ function RegisterPage() {
           <Button type="submit">Submit</Button>
         </Form>
         <Button variant="secondary">Demo App</Button>
-        <MemberSwitchContainer>Already a memeber???<Button variant="text">Login</Button></MemberSwitchContainer>
+        <MemberSwitchContainer>Already a memeber?<Button variant="text">Login</Button></MemberSwitchContainer>
       </Card>
     </Container>
   );
