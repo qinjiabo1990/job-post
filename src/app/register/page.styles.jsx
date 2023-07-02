@@ -28,4 +28,5 @@ export const StyledButton = styled(Button)`
 
 export const MemberSwitchContainer = styled.span`
   display: flex;
+  width: 100%;
 `;
