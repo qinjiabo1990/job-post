@@ -37,7 +37,7 @@ function RegisterPage() {
           <FormInputRow onChange={handleOnChange} type="password" name="password" />
           <Button type="submit">Submit</Button>
         </Form>
-        <Button variant="secondary">Demo App</Button>
+        {/* <Button variant="secondary">Demo App</Button> */}
         <MemberSwitchContainer>Already a memeber?<Button variant="text">Login</Button></MemberSwitchContainer>
       </Card>
     </Container>
