@@ -30,14 +30,14 @@ function RegisterPage() {
     <Container>
       <Card>
         <Logo />
-        <FormTitle>Register - Bob</FormTitle>
+        <FormTitle>Register</FormTitle>
         <Form onSubmit={handleOnSubmit}>
           <FormInputRow onChange={handleOnChange} type="text" name="name" />
           <FormInputRow onChange={handleOnChange} type="text" name="email" />
           <FormInputRow onChange={handleOnChange} type="password" name="password" />
           <Button type="submit">Submit</Button>
         </Form>
-        <Button variant="secondary">Demo App</Button>
+        {/* <Button variant="secondary">Demo App</Button> */}
         <MemberSwitchContainer>Already a memeber?<Button variant="text">Login</Button></MemberSwitchContainer>
       </Card>
     </Container>
