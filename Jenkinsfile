@@ -24,7 +24,7 @@ pipeline {
     stage('Deploy to S3') {
       steps {
         // Clear existing files in the S3 bucket
-        // sh 'aws s3 rm s3://job-post --recursive'  // can be removed, sync can do the entire update
+        sh 'aws s3 rm s3://job-post --recursive'
 
         // Sync the local code with the S3 bucket
         sh 'aws s3 sync ./out/ s3://job-post'
