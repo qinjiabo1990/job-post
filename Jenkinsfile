@@ -5,7 +5,7 @@ pipeline {
     stage('Checkout') {
       steps {
         // Checkout source code from the GitHub repository
-        git url: 'https://github.com/qinjiabo1990/job-post.git'
+        git branch:'main', url: 'https://github.com/qinjiabo1990/job-post.git'
       }
     }
 
