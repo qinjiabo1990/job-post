@@ -30,7 +30,7 @@ function RegisterPage() {
     <Container>
       <Card>
         <Logo />
-        <FormTitle>Register - Update</FormTitle>
+        <FormTitle>Register</FormTitle>
         <Form onSubmit={handleOnSubmit}>
           <FormInputRow onChange={handleOnChange} type="text" name="name" />
           <FormInputRow onChange={handleOnChange} type="text" name="email" />
