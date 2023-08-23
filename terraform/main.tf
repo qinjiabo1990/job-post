@@ -19,11 +19,8 @@ resource "aws_s3_bucket" "static_react_bucket" {
     Name = "job-post-terrform-bucket"
   }
 
-  force_destroy = true
-  lifecycle {
-    prevent_destroy = false
-  }
-
+  # If versioning is true, we may need force_destroy
+  # force_destroy = true
   versioning {
     enabled = false
   }

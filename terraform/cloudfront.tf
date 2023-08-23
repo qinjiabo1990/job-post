@@ -4,11 +4,6 @@ locals {
 
 resource "aws_cloudfront_origin_access_identity" "oai" {
   comment = "my-react-app-OAI"
-
-  # To destroy (delete) a CloudFront Origin Access Identity (OAI) 
-  lifecycle {
-    prevent_destroy = false
-  }
 }
 
 resource "aws_cloudfront_distribution" "cf_distribution" {
@@ -19,10 +14,6 @@ resource "aws_cloudfront_distribution" "cf_distribution" {
     s3_origin_config {
       origin_access_identity = aws_cloudfront_origin_access_identity.oai.cloudfront_access_identity_path
     }
-  }
-
-  lifecycle {
-    prevent_destroy = false
   }
 
   enabled         = true
@@ -73,7 +64,8 @@ resource "aws_cloudfront_distribution" "cf_distribution" {
 
   price_class = "PriceClass_100"
 
-  retain_on_delete = true
+  # Disable resource but delete - in our case should be false
+  retain_on_delete = false
 
   custom_error_response {
     error_caching_min_ttl = 300
@@ -96,6 +88,3 @@ resource "aws_cloudfront_distribution" "cf_distribution" {
     minimum_protocol_version = "TLSv1.1_2016"
   }
 }
-
-#### TODO ####
-# Check after deploying if distribution is destroied
